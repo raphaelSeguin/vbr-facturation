@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;, serif;
+  background-color: #fff;
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  line-height: 80px;
+}
+
+h2 {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.adresses {
+  margin: 100px 10% 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.adresses p{
+  width: 200px;
+}
+
+.nom-de-societe {
+  font-weight: bold;
+}
+
+.corps {
+  margin: 0 5%;
+}
+
+.numero-date {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin: 30px 0;
+}
+
+.sub-total {
+  border-top: 2px solid #000;
+}
+
+.nombres {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.total {
+  border-top: 3px solid #000;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  border-top: 2px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+td {
+  text-align: left;
+  padding: 20px 0px;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+}

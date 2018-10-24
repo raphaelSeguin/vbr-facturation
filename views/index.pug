@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1 VBR facturation
+
+  form(action="/" method="POST")
+    label(for="nomDeSociete") nom de la société
+    input(type="text" name="nomDeSociete")
+    br
+    label(for="adresseRue") rue
+    input(type="text" name="adresseRue")
+    br
+    label(for="adresseVille") ville
+    input(type="text" name="adresseVille")
+    br
+    label(for="siret") SIRET
+    input(type="text" name="siret")
+    br
+    label(for="tva") TVA
+    input(type="text" name="tva")
+    br
+    label(for="numero") facture N°
+    input(type="text" name="numero")
+    br
+    label(for="date") Date date
+    input(type="text" name="date")
+    br
+    label(for="objet") objet
+    input(type="text" name="objet")
+    br
+    label(for="item1") item 1
+    input(type="text" name="item1")
+    br
+    label(for="item1ht") item 1 prix HT
+    input(type="text" name="item1ht")
+
+    hr
+    input(type="submit", value="Voir la facture")

@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    link(href='stylesheets/normalize.css', rel='stylesheet')
+    link(href='stylesheets/main.css', rel='stylesheet')
+  body
+    header
+      h1 VBR
+      h2 SARL 750 892 119 000 17
+    .adresses
+      #adresse-VBR
+        p
+          span.nom-de-societe VBR
+          br
+          |           8, allée du Bois Gougenot
+          br
+          |           78290 Croissy-sur-Seine
+          br
+          |           FRANCE
+          br
+          |           SIRET : 75089211900017
+          br
+          |           TVA : FR 70 750892119
+          br
+          span.email vbr.contact@gmail.com
+      #adresse-client
+        p
+          span.nom-de-societe #{nomDeSociete}
+          br
+          |           #{adresseRue}
+          br
+          |           #{adresseVille}
+          br
+          |           #{pays}
+          br
+          |           #{siret}
+          br
+          |           #{tva}
+    .corps
+      .numero-date
+        #numero Facture N°#{numero}
+        #date #{date}
+      p OBJET : #{objet}
+      table
+        tbody
+          tr
+            td #{item1}
+            td.nombres #{item1ht}€
+
+          tr.sub-total
+            td TOTAL HT
+            td.nombres #{item1ht}€
+          tr
+            td TVA 20%
+            td.nombres #{parseInt(item1ht) * 0.2}€
+          tr.total
+            td TOTAL TTC
+            td.nombres #{parseInt(item1ht) * 1.2}€
