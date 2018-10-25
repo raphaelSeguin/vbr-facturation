@@ -2,8 +2,12 @@ doctype html
 html
   head
     link(href='stylesheets/normalize.css', rel='stylesheet')
-    link(href='stylesheets/main.css', rel='stylesheet')
+    link(href='stylesheets/facture.css', rel='stylesheet')
   body
+    a(href="/")
+      button#backButton retour
+    a(href="/imprimer")
+      button#printButton imprimer
     header
       h1 VBR
       h2 SARL 750 892 119 000 17
@@ -56,3 +60,4 @@ html
           tr.total
             td TOTAL TTC
             td.nombres #{parseInt(item1ht) * 1.2}€
+  script(src="")
