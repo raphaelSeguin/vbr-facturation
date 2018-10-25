@@ -3,7 +3,7 @@ extends layout
 block content
   h1 VBR facturation
   select#liste-des-factures
-    option(value="#") ___ 
+    option(value="#") Nouvelle facture
     each facture in menu
       option(value=facture.numero) #{facture.numero} #{facture.nomDeSociete}
   a#obtenir(href="#")
