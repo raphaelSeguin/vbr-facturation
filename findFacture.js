@@ -1,7 +1,7 @@
 const Mongodb = require('mongodb').MongoClient;
 const dbURI = process.env.NODE_ENV === 'production' ? process.env.DB_URI : require('./config.js');
 
-module.exports = (facture) => {
+module.exports = (query) => {
     return new Promise( (resolve, reject) => {
         Mongodb.connect(
             dbURI, 
@@ -15,17 +15,17 @@ module.exports = (facture) => {
                     dbo.collection('factures', function(err, res) {
                         if (err) reject(err);
                         else {
-                            res.insertOne(facture, function(err, item) {
+                            res.findOne(query, function(err, doc) {
                                 if (err) reject(err);
-                                resolve(item);
+                                resolve(doc);
+                                db.close();
                             });
                         }
-                        db.close();
                     });
                 }
             }
         );
-    });
+    })
 }
 
 

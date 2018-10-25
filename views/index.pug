@@ -2,37 +2,44 @@ extends layout
 
 block content
   h1 VBR facturation
-
+  select#liste-des-factures
+    option(value="#") ___ 
+    each facture in menu
+      option(value=facture.numero) #{facture.numero} #{facture.nomDeSociete}
+  a#obtenir(href="#")
+    button obtenir
   form(action="/" method="POST")
     label(for="nomDeSociete") nom de la société
-    input(type="text" name="nomDeSociete" value=nomDeSociete) 
+    input(type="text" name="nomDeSociete" value=facture.nomDeSociete) 
     br
     label(for="adresseRue") rue
-    input(type="text" name="adresseRue" value=adresseRue) 
+    input(type="text" name="adresseRue" value=facture.adresseRue) 
     br
     label(for="adresseVille") ville
-    input(type="text" name="adresseVille" value=adresseVille) 
+    input(type="text" name="adresseVille" value=facture.adresseVille) 
     br
     label(for="siret") SIRET
-    input(type="text" name="siret" value=siret) 
+    input(type="text" name="siret" value=facture.siret) 
     br
     label(for="tva") TVA
-    input(type="text" name="tva" value=tva)
+    input(type="text" name="tva" value=facture.tva)
     br
     label(for="numero") facture N°
-    input(type="text" name="numero" value=numero) 
+    input(type="text" name="numero" value=facture.numero) 
     br
     label(for="date") Date date
-    input(type="text" name="date" value=date) 
+    input(type="text" name="date" value=facture.date) 
     br
     label(for="objet") objet
-    input(type="text" name="objet" value=objet) 
+    input(type="text" name="objet" value=facture.objet) 
     br
     label(for="item1") item 1
-    input(type="text" name="item1" value=item1) 
+    input(type="text" name="item1" value=facture.item1) 
     br
     label(for="item1ht") item 1 prix HT
-    input(type="text" name="item1ht" value=item1ht) 
+    input(type="text" name="item1ht" value=facture.item1ht) 
 
     hr
     input(type="submit", value="Voir la facture")
+
+  script(src="javascripts/index.js")

@@ -81,3 +81,9 @@ td {
   border-top: 1px solid #777;
   border-bottom: 1px solid #777;
 }
+
+@media print {
+  button {
+    display: none;
+  }
+}

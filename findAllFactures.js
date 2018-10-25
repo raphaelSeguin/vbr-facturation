@@ -15,17 +15,17 @@ module.exports = (facture) => {
                     dbo.collection('factures', function(err, res) {
                         if (err) reject(err);
                         else {
-                            res.insertOne(facture, function(err, item) {
+                            res.find({}).toArray(function(err, docs) {
                                 if (err) reject(err);
-                                resolve(item);
+                                resolve(docs);
+                                db.close();
                             });
                         }
-                        db.close();
                     });
                 }
             }
         );
-    });
+    })
 }
 
 
